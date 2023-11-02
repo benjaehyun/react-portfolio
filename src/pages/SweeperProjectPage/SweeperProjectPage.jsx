@@ -1,4 +1,4 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+
 
 export default function SweeperProjectPage() {
   return (
@@ -34,9 +34,9 @@ export default function SweeperProjectPage() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">sweeper</h1> <br />
-              <a href="https://github.com/benjaehyun/sweeper" target="_blank" className='underline'>Link To GitHub</a> || &nbsp;
-              <a href="https://benjaehyun.github.io/sweeper/" target="_blank" className='underline'>Link To App</a>
-              <p className="mt-6 text-xl leading-8 text-gray-700">
+              <a href="https://github.com/benjaehyun/sweeper" target="_blank" rel="noopener noreferrer" className='underline'>Link To GitHub</a> || &nbsp;
+              <a href="https://benjaehyun.github.io/sweeper/" target="_blank" rel="noopener noreferrer" className='underline'>Link To App</a>
+              <p className="mt-6 text-xl leading-8 text-gray-700 text-justify">
               Based on the popular game Minesweeper, sweeper is a logic puzzle game which features a grid of clickable squares with hidden
                bombs scattered through the board. The goal of the game is to clear the entire board without setting off any of the bombs.
               </p>
@@ -56,22 +56,25 @@ export default function SweeperProjectPage() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p>
-                Description: <br /> 
+            <h1 className='font-bold text-xl'>Description:  </h1><br /> 
+              <p className='text-justify'>
                     A browser contained game created using only JavaScript, HTML, and CSS. Sweeper was my first dive into 
                     developing using a nostalgic pastime as reference. This project utilizes basic game logic to check for win/lose condition ie. if a bomb containing cell was clicked or if 
                     all non-bomb containing cells have been revealed. 
                     <br /> 
+                    <br /> 
                     The game uses DOM manipulation for graphic rendering and on-click controls. Once a user selects a difficulty (initiating the game), the script 
                     programatically constructs the back-end representation of the cells which are 2-D arrays and implements a class-based approach in the construction. 
+                    <br /> 
                     <br /> 
                     The final and honestly most difficult portion 
                     of this project was the function handling the initial reveal, in which the user clicks a completely blank board and a solvable pattern of cells are uncovered with their corresponding values.
                     The function was ultimately designed in such a way that the bombs were placed in cells that did not match the exact cell that the user first clicked (so that the user could not lose on the first turn).
                     Then a recursive reveal function was called designed after a flood-fill algorithm. 
               </p>
-              <p className="mt-8">
-                Difficulties : <br />  
+                <br /> 
+              <h1 className='font-bold text-xl'>Notes: </h1>
+              <p className="mt-8 text-justify">
                 As mentioned above, the most difficult portion of this project was getting the correct behavior of the initial reveal function such that the user will always be displayed a solvable pattern. 
                 I spent a handful of days implementing different versions of the function looking for the right pattern, as compared to the few days that it took to build out the rest of the app out of the 1 week sprint for the whole project.
                 Following the guidance of online resources, I tried to implement a version of a flood-fill algorithm that would be able to fill a space when given defined edges (in this case, the edges were 

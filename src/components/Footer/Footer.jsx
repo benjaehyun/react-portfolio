@@ -19,8 +19,8 @@ export default function Footer() {
                     <h1 className="w-full font-serif text-4xl">Ben Lee</h1> 
                     <h2 className="font-sans italic"> Feel free to reach out or say hi! </h2>
                     <div className="mt-4 flex justify-center space-x-12">
-                        <a href="https://github.com/benjaehyun" target="_blank" className='text-4xl'> <FontAwesomeIcon icon={faGithub} /> </a> <br />
-                        <a href="https://www.linkedin.com/in/benjaehyun/" target="_blank" className='text-4xl'><FontAwesomeIcon icon={faLinkedin} /></a> <br />
+                        <a href="https://github.com/benjaehyun" target="_blank" rel="noopener noreferrer" className='text-4xl'> <FontAwesomeIcon icon={faGithub} /> </a> <br />
+                        <a href="https://www.linkedin.com/in/benjaehyun/" target="_blank" rel="noopener noreferrer" className='text-4xl'><FontAwesomeIcon icon={faLinkedin} /></a> <br />
                         <a href = "mailto: benjaminjaelee@gmail.com" className="text-4xl"><FontAwesomeIcon icon={faEnvelope} /></a>
                     </div>
                 </div>

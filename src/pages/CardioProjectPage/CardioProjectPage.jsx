@@ -1,4 +1,3 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
 export default function Example() {
   return (
@@ -34,8 +33,10 @@ export default function Example() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">cardIO</h1>
-              <p>add links or something to the github and deployed sites</p>
-              <p className="mt-6 text-xl leading-8 text-gray-700">
+              <a href="https://github.com/benjaehyun/cardIO" target="_blank" rel="noopener noreferrer" className='underline'>Link To GitHub</a> || &nbsp;
+              <a href="https://cardio-d645429cce4f.herokuapp.com/" target="_blank" rel="noopener noreferrer" className='underline'>Link To App</a>
+              <p className='mt-6 text-sm text-gray-700 '> Note: Live app is under construction, but please check out the Github for more information about this project! </p>
+              <p className="mt-6 text-xl leading-8 text-gray-700 text-justify">
               cardIO is a powerful educational resource designed to draw on high-yield learning from spaced repetition during long study sessions. 
               This app was developed with a focus on efficiency, effectiveness, and user-friendliness, drawing inspiration from popular platforms like Anki and Quizlet.
               </p>
@@ -52,21 +53,22 @@ export default function Example() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p>
-                Description: 
+            <h1 className='font-bold text-xl'>Description:  </h1><br /> 
+              <p className='text-justify'>
                 In cardIO, users are able to create/login to an account using their Google account (implemented using Passport.js authentication middleware which handled Google's Oauth procedure). 
                 Users can then create their own decks of flashcards and go through each card until they are finished with the deck. They are also able to view all 
                 of the decks created on the platform and see collections of decks different users have made as well. Also, users are encouraged to have discussions on various topics 
                 with comments and message boards residing on both decks and individual cards.
               </p>
-              <p className="mt-8">
-                Difficulties: 
+              <br />
+              <h1 className='font-bold text-xl'>Notes: </h1>
+              <p className="mt-8 text-justify">
                 Developing most portions of this app was fairly straightforward, using the Express framework with newly learned RESTful Routing practices. The main difficulty with developing this app 
                 came from the constraints associated with using Embedded JavaScript Templates as the front-end. While many aspects of the app could be normally done by routing and rendering some data that is returned
                 by the server, flipping the cards was significantly more involved than expected. Slightly deviating from the conventions of EJS usage, I implemented a script that uses DOM manipulation to handle the flip 
                 trigger and display the fronts and backs of the card. 
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Technologies Used: </h2>
+              <h2 className="mt-16 text-xl font-bold tracking-tight text-gray-900">Technologies Used: </h2>
               <p className="mt-6">
                 JavaScript, HTML, CSS, Passport.js, Node.js, Express.js, MongoDB, and Mongoose
               </p>

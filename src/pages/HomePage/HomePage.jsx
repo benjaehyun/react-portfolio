@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom'
-import { useCallback } from 'react'
 
 
 export default function HomePage () {

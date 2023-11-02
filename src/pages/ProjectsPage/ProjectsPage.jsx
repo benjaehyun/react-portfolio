@@ -17,7 +17,7 @@ export default function ProjectsPage () {
             </div>
             <h1 className='text-white text-4xl mt-[5vh]'> Thanks for taking an interest in some of my projects! <br /> <br /> </h1>
              <h2 className="text-white text-2xl" >
-             Take a look at what I've been up to recently 👇 
+             Take a look at what I've been up to recently ⬇️ 
              </h2>
             <div className='flex flex-col justify-evenly items-center mb-[15vh] space-y-12 font-mono mt-[30vh]'>
                 <h1 className="text-4xl text-white"> Projects Page</h1>

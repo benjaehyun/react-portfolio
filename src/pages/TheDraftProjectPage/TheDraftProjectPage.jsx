@@ -1,4 +1,4 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+
 
 export default function Example() {
   return (
@@ -34,9 +34,9 @@ export default function Example() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Draft</h1> <br />
-              <a href="https://github.com/benjaehyun/thedraft" target="_blank" className='underline'>Link To GitHub</a> || &nbsp;
-              <a href="https://thedraft-theebuggers-823b566ea1e8.herokuapp.com/" target="_blank" className='underline'>Link To App</a>
-              <p className="mt-6 text-xl leading-8 text-gray-700">
+              <a href="https://github.com/benjaehyun/thedraft" target="_blank" rel="noopener noreferrer" className='underline'>Link To GitHub</a> || &nbsp;
+              <a href="https://thedraft-theebuggers-823b566ea1e8.herokuapp.com/" target="_blank" rel="noopener noreferrer" className='underline'>Link To App</a>
+              <p className="mt-6 text-xl leading-8 text-gray-700 text-justify">
               The Draft, created in collaboration with developers Nadew Demissew and Jonathan Do, is a discussion forum connecting job-seekers and industry experts 
               together to share knowledge, experiences, and insights with one another. Drawing inspiration from the site CollegeConfidential.com,
                users generate discussion that helps everyone navigate the often complex and challenging world of job hunting. The app's other major component 
@@ -60,20 +60,22 @@ export default function Example() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p>
-                Description: <br />
+            <h1 className='font-bold text-xl'>Description:  </h1><br /> 
+              <p className='text-justify'>
                 The first major component to The Draft app is the subforums feature, which is how users submit topics, questions, or any other kind of interesting content for other users to engage with. Subforms fall into two catergories: General subforums and Company subforums. General subforums are how users can submit content for discussion that is regarding a general topic of conversation relating to job-seeking. Alternatively, Company subforums are how users submit content related to job-searching or interesting info regarding a specific company. Once on a given company's page, the user can then navigate all discussions related to that company.
+                <br />
                 <br />
                 The second major component to The Draft App is it's job application tracker, which lives on the user's profile. The Job Application Tracker feature is designed to help users track a particular application cycle and provides a pdf viewer to show them what resume and/or cover letter was used, a status field that can be updated to reflect where they currently are in the cycle, and additional data like application components and notes to help the user provided extra context and action items as needed.
               </p>
-              <p className="mt-8">
-                Difficulties: 
+                <br />
+              <h1 className='font-bold text-xl'>Notes: </h1>
+              <p className="mt-8 text-justify">
                 The most apparent difficulty with this project was the time constraint. Even though it was developed in a 3-member team, implementing all of the app's functionalities within a 1 week sprint
                 was extremely arduous. To add onto our sheer ambition with the app's capabilities, many of the app's functionality relied on technologies and implementations that we've never used before: AJAX calls, 
                 handling both image and pdf file uploads with AWS S3, utilizing PDF.js to display the stored pdf files, using the bootstrap library for the first time, as well as several other aspects of the project. 
                 Overall, I think that we were able to accomplish everything we had initially set out to with this project in a way that is useful and intuitive from a user experience perspective.  
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Technologies Used: </h2>
+              <h2 className="mt-16 text-xl font-bold tracking-tight text-gray-900">Technologies Used: </h2>
               <p className="mt-6">
                 Python, JavaScript, HTML, CSS, Django, Bootstrap, AWS, PDF.js, Heroku, Django Templating Language, PostgreSQL. 
               </p>

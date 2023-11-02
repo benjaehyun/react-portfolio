@@ -43,8 +43,8 @@ export default function AboutPage () {
             </div>
             <h1 className="text-white text-3xl">Find me on: </h1>
             <div>
-                <a href="https://github.com/benjaehyun" target="_blank" className='text-white underline text-2xl'> GitHub </a>  &nbsp; <span className="text-white text-2xl">||</span> &nbsp;
-                <a href="https://www.linkedin.com/in/benjaehyun/" target="_blank" className='text-white underline text-2xl'>LinkedIn</a>
+                <a href="https://github.com/benjaehyun" target="_blank" rel="noopener noreferrer" className='text-white underline text-2xl'> GitHub </a>  &nbsp; <span className="text-white text-2xl">||</span> &nbsp;
+                <a href="https://www.linkedin.com/in/benjaehyun/" target="_blank" rel="noopener noreferrer" className='text-white underline text-2xl'>LinkedIn</a>
             </div>
             <div className="text-center flex items-center justify-center">
                 <img src="hobby/seattle.jpg" alt="" className="w-[60vw] z-[-1] blur-md bottom-[10%]"/>
@@ -52,9 +52,10 @@ export default function AboutPage () {
                     <img src="me/hobby-2.png" alt="" className="w-[12vw] z-1 border-solid rounded-full border-2" />
                     <div className="w-[30vw] ml-16">
                         <h1 className='text-black text-4xl italic'> A little more about me: </h1> <br /> 
-                        <h3 className="text-black text-xl "> I'm a 2nd gen Korean-American born and raised in Oklahoma. <br /> <br />
+                        <h3 className="text-black text-xl bg-slate-100/25 p-6 border-hidden rounded-lg border-2 "> I'm a 2nd gen Korean-American born and raised in Oklahoma. <br /> <br />
+                        <span className="text-justify">
                         Some of my favorite hobbies include: golf, photography (all of the photos on my site are photos I've taken!), cooking for friends, and reading when I have down time (which I can't seem to find much of these days 😅)
-                        I'm currently reading "yolk" by Mary HK Choi. </h3>
+                        I'm currently reading "yolk" by Mary HK Choi.</span> </h3>
                     </div>
                 </div>
             </div>
