@@ -38,7 +38,7 @@ export default function Example() {
               <a href="https://thedraft-theebuggers-823b566ea1e8.herokuapp.com/" target="_blank" rel="noopener noreferrer" className='underline'>Link To App</a>
               <p className="mt-6 text-xl leading-8 text-gray-700 text-justify">
               The Draft, created in collaboration with developers Nadew Demissew and Jonathan Do, is a discussion forum connecting job-seekers and industry experts 
-              together to share knowledge, experiences, and insights with one another. Drawing inspiration from the site CollegeConfidential.com,
+              together to share knowledge, experiences, and insights with one another. Drawing inspiration from the popular website CollegeConfidential.com,
                users generate discussion that helps everyone navigate the often complex and challenging world of job hunting. The app's other major component 
                is the job tracker feature that is tied to each user. 
               </p>
