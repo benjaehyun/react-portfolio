@@ -10,6 +10,7 @@ import TheDraftProjectPage from '../TheDraftProjectPage/TheDraftProjectPage';
 import LowkeyProjectPage from '../LowkeyProjectPage/LowkeyProjectPage';
 import HomePage from '../HomePage/HomePage';
 import Footer from '../../components/Footer/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/contact' element={<ContactPage />} />
        </Routes>
        <Footer /> 
+       <Analytics /> 
     </main>
   );
 }
