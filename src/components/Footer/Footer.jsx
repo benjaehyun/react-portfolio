@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="flex-1 mb-6 md:mb-0">
           <h1 className="font-serif text-4xl">Ben Lee</h1>
           <h2 className="font-sans italic text-lg mt-2">Feel free to reach out or say hi!</h2>
-          <div className="mt-4 flex justify-center md:mt-0">
+          <div className="mt-4 flex justify-center">
             <a href="https://github.com/benjaehyun" target="_blank" rel="noopener noreferrer" className='text-4xl mx-2 md:mx-4'>
               <FontAwesomeIcon icon={faGithub} />
             </a>
