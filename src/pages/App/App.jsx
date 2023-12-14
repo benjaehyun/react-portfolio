@@ -9,6 +9,7 @@ import CardioProjectPage from '../CardioProjectPage/CardioProjectPage';
 import TheDraftProjectPage from '../TheDraftProjectPage/TheDraftProjectPage';
 import LowkeyProjectPage from '../LowkeyProjectPage/LowkeyProjectPage';
 import HomePage from '../HomePage/HomePage';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Footer from '../../components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/projects/lowkey' element={<LowkeyProjectPage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='*' element={<NotFoundPage />} />
        </Routes>
        <Footer /> 
        <Analytics /> 
