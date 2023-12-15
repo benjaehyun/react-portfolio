@@ -70,18 +70,18 @@ export default function AboutPage () {
                     backgroundImage: 'url("hobby/millpark.jpg")'
                     }}
                     className='h-[90vh] md:h-[80vh] lg:h-[75vh] bg-cover bg-center absolute w-full z-[-1] blur-md top-0 left-0'
-                >
-                </div>
+                />
+                
                 <div className="flex flex-col md:flex-row justify-center items-center pt-[10vh] md:pt-[15vh] relative ">
                     <img src="me/wedding-photo.png" alt="Ben Lee" className="w-32 md:w-[12vw] rounded-full border-2 border-white" />
                     <div className="w-4/5 md:w-[30vw] mt-4 md:mt-0 md:ml-16 p-4">
-                    <h1 className='text-white text-2xl md:text-4xl'>A pre-med student turned engineer and new Seattleite with a passion for elegant solutions.</h1> <br />
-                    <h3 className="text-white text-lg md:text-xl italic">And recent graduate of General Assembly's Software Engineering Immersive Program!</h3>
+                        <h1 className='text-white text-2xl md:text-4xl'>A pre-med student turned engineer and new Seattleite with a passion for elegant solutions.</h1> <br />
+                        <h3 className="text-white text-lg md:text-xl italic">And recent graduate of General Assembly's Software Engineering Immersive Program!</h3>
                     </div>
                 </div>
                 <div className="flex flex-col items-center mb-10 md:mb-[15vh] space-y-12 md:space-y-24 pt-[35vh] md:pt-[30vh] lg:pt-[35vh] px-4 relative z-10">
                     <div className="w-full md:w-[60vw] text-center md:text-left">
-                        <h1 className="text-white text-3xl md:text-5xl"> Hi 👋, Glad you were able to find me! </h1> <br />
+                        <h1 className="text-white text-center text-3xl md:text-5xl"> Hi 👋, Glad you were able to find me! </h1> <br />
                         <h2 className="text-white text-lg md:text-xl leading-normal md:leading-relaxed"> 
                             I'm Ben, and I am currently based in Seattle, WA. I'm a creative-minded software
                             developer with a passion for elegant solutions to enrich user experiences.
@@ -107,7 +107,7 @@ export default function AboutPage () {
                     <ul className="text-white list-disc flex flex-col justify-evenly space-y-5 mt-12">
                         <div className='grid grid-cols-7 grid-row-2 gap-y-5'> */}
 
-                        
+
                     <div className="border-solid w-full md:w-2/4 rounded-md border-2 p-12 bg-slate-600/40">
                         <h1 className="text-white text-4xl"> Skills </h1>
                         <ul className="text-white list-disc flex flex-col justify-evenly space-y-5 mt-12">
