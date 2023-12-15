@@ -12,13 +12,17 @@ import HomePage from '../HomePage/HomePage';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Footer from '../../components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import React, { useState } from 'react';
 
 function App() {
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <main className="App relative">
-       <Navbar /> 
+       <Navbar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} /> 
        <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='/' element={<HomePage isMobileMenuOpen={isMobileMenuOpen} />} />
           <Route path='/projects' element={<ProjectsPage />} />
           <Route path='/projects/sweeper' element={<SweeperProjectPage />} />
           <Route path='/projects/cardio' element={<CardioProjectPage />} />

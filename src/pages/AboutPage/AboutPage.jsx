@@ -81,7 +81,7 @@ export default function AboutPage () {
                 </div>
                 <div className="flex flex-col items-center mb-10 md:mb-[15vh] space-y-12 md:space-y-24 pt-[35vh] md:pt-[30vh] lg:pt-[46vh] px-4 relative z-10">
                     <div className="w-full md:w-[60vw] text-center md:text-left">
-                        <h1 className="text-white text-center text-3xl md:text-5xl"> Hi 👋, Glad you were able to find me! </h1> <br />
+                        <h1 className="text-white text-center text-3xl md:text-5xl"> Hi 👋, Glad you were able to find me! </h1> <br /> <br />
                         <h2 className="text-white text-lg md:text-xl leading-normal md:leading-relaxed"> 
                             I'm Ben, and I am currently based in Seattle, WA. I'm a creative-minded software
                             developer with a passion for elegant solutions to enrich user experiences.

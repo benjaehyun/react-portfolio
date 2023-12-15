@@ -1,6 +1,6 @@
 import ProjectsList from '../../components/ProjectsList/ProjectsList'
 
-export default function HomePage () {
+export default function HomePage ({isMobileMenuOpen}) {
 
     const projects = [
         {
@@ -31,6 +31,8 @@ export default function HomePage () {
             linkSuffix: "sweeper"
         },
     ];
+
+    const paddingTopClass = isMobileMenuOpen ? 'pt-[30vh]' : 'pt-[10vh]';
     
     return (
         <>
@@ -78,7 +80,7 @@ export default function HomePage () {
             style={{ backgroundImage: 'url("hobby/chicago-street.jpg")' }}
             className='h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-sm top-0 left-0'
         ></div>
-        <div className="flex flex-col md:flex-row justify-center items-center pt-[10vh] md:pt-[9vh] relative">
+        <div className={`flex flex-col md:flex-row justify-center items-center pt-[10vh] md:${paddingTopClass} relative`}>
             <img 
                 src="me/griffith-portrait.jpg" 
                 alt="Ben Lee" 
