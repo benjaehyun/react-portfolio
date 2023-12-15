@@ -89,7 +89,7 @@ export default function Navbar() {
                     <div className="hidden md:flex w-full justify-evenly items-center font-mono font-extralight text-lg text-white">
                         <Link to='/' className="mr-4">Home</Link>
                         <Link to='/projects' className="mx-4">Projects</Link>
-                        <Link to='/about' className="ml-4">About Me</Link>
+                        <Link to='/about' className="mx-4">About Me</Link>
                         <Link to='/contact' className="ml-4">Contact</Link>
                     </div>
                 </div>

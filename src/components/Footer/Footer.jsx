@@ -45,7 +45,8 @@ export default function Footer() {
                 <div className="flex-1 flex flex-col items-center md:flex-row md:justify-end font-mono font-extralight text-lg">
                     <Link to='/' className="mb-4 md:mb-0 md:mr-4">Home</Link>
                     <Link to='/projects' className="mb-4 md:mb-0 md:mx-4">Projects</Link>
-                    <Link to='/about' className="mb-4 md:mb-0 md:ml-4">About Me</Link>
+                    <Link to='/about' className="mb-4 md:mb-0 md:mx-4">About Me</Link>
+                    <Link to='/contact' className="mb-4 md:mb-0 md:ml-4">Contact</Link>
                 </div>
             </div>
     </div>
