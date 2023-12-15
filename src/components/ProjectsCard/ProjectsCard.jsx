@@ -26,13 +26,13 @@ export default function ProjectsCard({ title, description, images, link }) {
 
         <Link to={link}>
             <div className='bg-gray-800 bg-opacity-75 text-white border-solid rounded-lg border-2 p-6 md:p-8 w-full md:w-[80vw] max-w-6xl mx-auto hover:bg-opacity-90 transition duration-300 ease-in-out'>
-                <div className='grid grid-cols-1 md:grid-cols-12 gap-6'>
+                <div className='grid grid-cols-1 md:grid-cols-12 gap-6 items-center'>
                     <div className='md:col-span-4'>
                         <h2 className='text-3xl font-bold mb-3'>{title}</h2>
                         <p className='text-lg'>{description}</p>
                     </div>
                     <div className='md:col-span-8'>
-                        <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4'>
+                        <div className='grid grid-cols-2  md:grid-cols-2 lg:grid-cols-2 gap-4'>
                             {images.map((image, index) => (
                                 <img key={index} src={image} className='rounded-lg w-full h-auto' alt={title} />
                             ))}

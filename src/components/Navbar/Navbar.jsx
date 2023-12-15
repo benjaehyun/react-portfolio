@@ -75,7 +75,7 @@ export default function Navbar() {
     const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
     return (
-        <div className="relative h-40">
+        <div className="relative h-40 ">
             <div className="flex items-center justify-between h-full px-4 sm:px-6 lg:ml-[16vw] lg:mr-[25vw]">
                 <Link to='/' onClick={closeMobileMenu}> {/* Added onClick event to close menu */}
                     <h1 className="font-serif text-4xl text-white whitespace-nowrap">Ben Lee</h1>
