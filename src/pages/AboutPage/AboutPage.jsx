@@ -3,8 +3,10 @@ import { PythonOriginal, JavascriptOriginal, ReactOriginal, ExpressOriginal, Htm
 
 
 
-export default function AboutPage () {
+export default function AboutPage ({isMobileMenuOpen}) {
     
+    const paddingTopClass = isMobileMenuOpen ? 'pt-[25vh]' : 'pt-[10vh]';
+
     return (
         <>
             {/* <div 
@@ -72,7 +74,7 @@ export default function AboutPage () {
                     className='h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-md top-0 left-0'
                 />
                 
-                <div className="flex flex-col md:flex-row justify-center items-center pt-[10vh] md:pt-[9vh] relative ">
+                <div className={`flex flex-col md:flex-row justify-center items-center ${paddingTopClass} md:pt-[9vh] relative `}>
                     <img src="me/wedding-photo.png" alt="Ben Lee" className="w-32 md:w-[20vw] rounded-full border-2 border-white" />
                     <div className="w-4/5 md:w-[30vw] mt-4 md:mt-0 md:ml-16 p-4">
                         <h1 className='text-white text-2xl md:text-4xl'>A pre-med student turned engineer and new Seattleite with a passion for elegant solutions.</h1> <br />

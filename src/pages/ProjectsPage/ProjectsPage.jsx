@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import ProjectsList from "../../components/ProjectsList/ProjectsList"
 
 
-export default function ProjectsPage () {
+export default function ProjectsPage ({isMobileMenuOpen}) {
 
     const projects = [
         {
@@ -34,6 +34,8 @@ export default function ProjectsPage () {
         },
     ];
     
+    const paddingTopClass = isMobileMenuOpen ? 'pt-[25vh]' : 'pt-[10vh]';
+
     return (
         <>
             <div 
@@ -42,15 +44,16 @@ export default function ProjectsPage () {
                 backgroundSize: "cover",
                 backgroundPosition: "center"
             }}
-            className='top-0 h-[50vh] absolute w-full z-[-1] blur-md'
+            className='h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-md top-0 left-0'
             >
-                {/* <img src="blurry-gradient-2.png" className='top-0' alt="" /> */}
             </div>
-            <h1 className='text-white text-4xl mt-[5vh]'> Thanks for taking an interest in some of my projects! <br /> <br /> </h1>
-             <h2 className="text-white text-2xl" >
-             Take a look at what I've been up to recently ⬇️ 
-             </h2>
-
+            <div className={`flex flex-col md:flex-row justify-center items-center ${paddingTopClass} md:pt-[22vh] relative `}>
+                    <div className="w-4/5 md:w-[30vw] mt-4 md:mt-0 md:ml-16 p-4">
+                        <h1 className='text-white text-4xl md:text-4xl'>Thanks for taking an interest in some of my projects!</h1> <br />
+                        <h3 className="text-white text-2xl md:text-xl ">Take a look at what I've been up to recently ⬇️</h3>
+                    </div>
+                </div>
+            
              <ProjectsList projects={projects} />
 
             {/* <div className='flex flex-col justify-evenly items-center mb-[15vh] space-y-12 font-mono mt-[30vh]'>

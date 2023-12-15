@@ -23,12 +23,12 @@ function App() {
        <Navbar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} /> 
        <Routes>
           <Route path='/' element={<HomePage isMobileMenuOpen={isMobileMenuOpen} />} />
-          <Route path='/projects' element={<ProjectsPage />} />
-          <Route path='/projects/sweeper' element={<SweeperProjectPage />} />
-          <Route path='/projects/cardio' element={<CardioProjectPage />} />
-          <Route path='/projects/thedraft' element={<TheDraftProjectPage />} />
-          <Route path='/projects/lowkey' element={<LowkeyProjectPage />} />
-          <Route path='/about' element={<AboutPage />} />
+          <Route path='/projects' element={<ProjectsPage isMobileMenuOpen={isMobileMenuOpen}/>} />
+          <Route path='/projects/sweeper' element={<SweeperProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
+          <Route path='/projects/cardio' element={<CardioProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
+          <Route path='/projects/thedraft' element={<TheDraftProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
+          <Route path='/projects/lowkey' element={<LowkeyProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
+          <Route path='/about' element={<AboutPage isMobileMenuOpen={isMobileMenuOpen}/>} />
           <Route path='/contact' element={<ContactPage />} />
           <Route path='*' element={<NotFoundPage />} />
        </Routes>

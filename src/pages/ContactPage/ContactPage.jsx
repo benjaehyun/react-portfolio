@@ -4,8 +4,10 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function ContactPage() {
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 px-4 py-8">
+
+
+    return (
+        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 px-4 py-8">
             <div className="max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl bg-gray-800 p-6 rounded-lg shadow-lg text-center">
                 <h1 className="text-3xl md:text-4xl font-semibold text-white mb-6">
                     Let's Connect!
@@ -26,5 +28,5 @@ export default function ContactPage() {
                 </div>
             </div>
         </div>
-  )
+    )
 }
