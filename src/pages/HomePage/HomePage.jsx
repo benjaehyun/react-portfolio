@@ -78,7 +78,7 @@ export default function HomePage () {
             style={{ backgroundImage: 'url("hobby/chicago-street.jpg")' }}
             className='h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-sm top-0 left-0'
         ></div>
-        <div className="flex flex-col md:flex-row justify-center items-center pt-[10vh] md:pt-[15vh] relative z-10">
+        <div className="flex flex-col md:flex-row justify-center items-center pt-[10vh] md:pt-[9vh] relative">
             <img 
                 src="me/griffith-portrait.jpg" 
                 alt="Ben Lee" 

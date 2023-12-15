@@ -69,17 +69,17 @@ export default function AboutPage () {
                     style={{
                     backgroundImage: 'url("hobby/millpark.jpg")'
                     }}
-                    className='h-[90vh] md:h-[80vh] lg:h-[75vh] bg-cover bg-center absolute w-full z-[-1] blur-md top-0 left-0'
+                    className='h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-md top-0 left-0'
                 />
                 
-                <div className="flex flex-col md:flex-row justify-center items-center pt-[10vh] md:pt-[15vh] relative ">
-                    <img src="me/wedding-photo.png" alt="Ben Lee" className="w-32 md:w-[12vw] rounded-full border-2 border-white" />
+                <div className="flex flex-col md:flex-row justify-center items-center pt-[10vh] md:pt-[9vh] relative ">
+                    <img src="me/wedding-photo.png" alt="Ben Lee" className="w-32 md:w-[20vw] rounded-full border-2 border-white" />
                     <div className="w-4/5 md:w-[30vw] mt-4 md:mt-0 md:ml-16 p-4">
                         <h1 className='text-white text-2xl md:text-4xl'>A pre-med student turned engineer and new Seattleite with a passion for elegant solutions.</h1> <br />
                         <h3 className="text-white text-lg md:text-xl italic">And recent graduate of General Assembly's Software Engineering Immersive Program!</h3>
                     </div>
                 </div>
-                <div className="flex flex-col items-center mb-10 md:mb-[15vh] space-y-12 md:space-y-24 pt-[35vh] md:pt-[30vh] lg:pt-[35vh] px-4 relative z-10">
+                <div className="flex flex-col items-center mb-10 md:mb-[15vh] space-y-12 md:space-y-24 pt-[35vh] md:pt-[30vh] lg:pt-[46vh] px-4 relative z-10">
                     <div className="w-full md:w-[60vw] text-center md:text-left">
                         <h1 className="text-white text-center text-3xl md:text-5xl"> Hi 👋, Glad you were able to find me! </h1> <br />
                         <h2 className="text-white text-lg md:text-xl leading-normal md:leading-relaxed"> 
@@ -248,19 +248,17 @@ export default function AboutPage () {
 {/* implementation 4 */}
 
                 <div className="relative flex items-center justify-center md:w-3/5 py-12">
-                    {/* Container with adjusted width and centered on all screen sizes */}
+                
                     <div className="flex items-center justify-center relative w-full mx-auto h-[30rem] sm:h-[40rem] md:h-[40rem] lg:h-[50rem]">
-                        {/* Background image */}
+                     
                         <img src="hobby/seattle.jpg" alt="" className="absolute inset-0 w-full h-full object-cover blur-md z-[-1]" />
 
-                        {/* Content container with adjustments for mobile and desktop */}
+                       
                         <div className="z-10 p-4 space-y-4 md:space-y-0 md:space-x-6 md:flex md:flex-row md:items-center md:justify-center">
-                            {/* Profile image maintaining aspect ratio and slightly larger */}
                             <div className="flex justify-center items-center w-full md:w-auto">
                                 <img src="me/hobby-2.png" alt="" className="h-auto w-1/3 md:w-48 lg:w-64 rounded-full border-2 border-white" />
                             </div>
 
-                            {/* Responsive text content with quicker scale-down */}
                             <div className="bg-slate-100/25 p-6 border-hidden rounded-lg border-2 text-center md:text-left max-w-xs sm:max-w-sm md:max-w-md lg:max-w-md xl:max-w-lg mx-auto">
                                 <h1 className='text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl italic'> A little more about me: </h1> <br />
                                 <h3 className="text-black text-sm sm:text-md md:text-lg lg:text-xl">

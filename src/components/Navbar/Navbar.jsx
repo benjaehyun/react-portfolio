@@ -90,6 +90,7 @@ export default function Navbar() {
                         <Link to='/' className="mr-4">Home</Link>
                         <Link to='/projects' className="mx-4">Projects</Link>
                         <Link to='/about' className="ml-4">About Me</Link>
+                        <Link to='/contact' className="ml-4">Contact</Link>
                     </div>
                 </div>
                 {isMobileMenuOpen && (
@@ -97,6 +98,7 @@ export default function Navbar() {
                         <Link to='/' className="text-white py-2" onClick={closeMobileMenu}>Home</Link> {/* Added onClick event */}
                         <Link to='/projects' className="text-white py-2" onClick={closeMobileMenu}>Projects</Link> {/* Added onClick event */}
                         <Link to='/about' className="text-white py-2" onClick={closeMobileMenu}>About Me</Link> {/* Added onClick event */}
+                        <Link to='/contact' className="text-white py-2" onClick={closeMobileMenu}>Contact</Link> {/* Added onClick event */}
                     </div>
                 )}
             </div>
