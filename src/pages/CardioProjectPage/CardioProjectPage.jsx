@@ -37,7 +37,7 @@ export default function Example({isMobileMenuOpen}) {
             <div className="lg:max-w-lg">
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">cardIO</h1>
               <a href="https://github.com/benjaehyun/cardIO" target="_blank" rel="noopener noreferrer" className='underline'>Link To GitHub</a> || &nbsp;
-              <a href="https://cardio-d645429cce4f.herokuapp.com/" target="_blank" rel="noopener noreferrer" className='underline'>Link To App</a>
+              <a href="https://cardio-c535cdf1802c.herokuapp.com/" target="_blank" rel="noopener noreferrer" className='underline'>Link To App</a>
               <p className='mt-6 text-sm text-gray-700 '> Note: Live app is under construction, but please check out the Github for more information about this project! </p>
               <p className="mt-6 text-xl leading-8 text-gray-700 text-justify">
               cardIO is a powerful educational resource designed to draw on high-yield learning from spaced repetition during long study sessions. 
@@ -49,7 +49,7 @@ export default function Example({isMobileMenuOpen}) {
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            src="/cardio/cardio-1.png"
             alt=""
           />
         </div>

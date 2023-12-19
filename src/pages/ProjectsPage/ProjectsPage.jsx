@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import ProjectsList from "../../components/ProjectsList/ProjectsList"
 
 
@@ -20,7 +19,7 @@ export default function ProjectsPage ({isMobileMenuOpen}) {
         {
             title: "cardIO",
             description: "A MEN-Stack flashcard app. My first Full-Stack application: CardIO. This project was developed as an educational resource to draw on high-yield learning from spaced repetition of flashcards. The idea for this app comes from my past experiences of using other flashcard apps such as Quizlet and Anki back as a pre-med student.",
-            images: ["cardio/cardio-mac-1.png", "cardio/cardio-mac-2.png"],
+            images: ["cardio/cardio-1.png", "cardio/cardio-2.png"],
             linkSuffix: "cardio"
         },
         {
