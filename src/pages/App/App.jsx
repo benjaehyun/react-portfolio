@@ -13,6 +13,7 @@ import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Footer from '../../components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import React, { useState } from 'react';
+import ScrollToTop from '../../utilities/ScrollToTop';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <main className="App relative">
+      <ScrollToTop />
        <Navbar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} /> 
        <Routes>
           <Route path='/' element={<HomePage isMobileMenuOpen={isMobileMenuOpen} />} />
