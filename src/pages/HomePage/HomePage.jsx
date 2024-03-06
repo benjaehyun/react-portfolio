@@ -25,7 +25,7 @@ export default function HomePage ({isMobileMenuOpen}) {
             title: "sweeper",
             description: "A browser game made using JavaScript, HTML, and CSS. Based on the popular game Minesweeper, sweeper was my first dive into development, while using a nostalgic pastime as reference. My first coding endeavor utilizes basic game logic, DOM manipulation for graphic rendering, and a recursive implementation for the cell reveal function.",
             images: [
-                // "sweeper/sweeper-1.png", "sweeper/sweeper-2.png", 
+                "sweeper/sweeper-mac-1.png", "sweeper/sweeper-mac-2.png", 
             // "sweeper/sweeper-3.png", "sweeper/sweeper-4.png"
         ],
             linkSuffix: "sweeper"

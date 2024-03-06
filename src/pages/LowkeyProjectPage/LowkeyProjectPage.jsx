@@ -65,25 +65,25 @@ export default function Example({isMobileMenuOpen}) {
             <h1 className='font-bold text-xl'>Description:  </h1><br /> 
               <p className='text-justify'>
                 When they are prompted during the profile creations process, users are able to select either: their top 20 songs from the past 6 months or a playlist from their library. 
-                Using Spotify's API, song features data can be fetched and stored. Using an algorithm that measures similarity metrics across features such as energy, instrumentalness, valence, etc., the 
+                Using Spotify's API, song feature data can be fetched and stored. Using an algorithm that measures similarity metrics across features (such as energy, instrumentalness, valence, etc.), the 
                 profiles displayed to the user will be sorted based on that similarity score. <br /> <br />
                 Once users are matched (they both send a "like" to each other), they can communicate via private messages
-                implemented using Socket.io, which are persisted in MongoDB for future sessions. Additionally, similarity data is displayed on the match page for each matched profile, showing 
-                what metrics the two users scored highly on. Other data that is shown to each match includes: songs, albums, or artists that the users may share. 
+                implemented using Socket.io, which are persisted in MongoDB for future sessions. Additionally, similarity data is displayed on the match page for each matched pair, showing 
+                what metrics the two users scored highly on. Other data shwon on the match page about each pair includes: songs, albums, or artists that the users may share. 
               </p>
               <br />
               <h1 className='font-bold text-xl'>Notes: </h1>
               <p className="mt-8 text-justify">
-                The most difficult part of starting this app was implementing Spotify's Authorization Flow with PKCE in addition to using JWT's to manage user data separate from Spotify. Once this was resolved, the next difficulty was also the most exciting: the algorithm for similarity metrics across users' songs. After extensive research, I ended up sorting the various song features 
-                and using a simple euclidean distance formula. From what I was able to learn, it was the best way to have some influence based on range, frequency, and other data features, on the overall similarity score.
-                I also considered other similarity meterics such as cosine similarity; however, these methods didn't seem to fit the data that was being returned by Spotify because things like the direction of vectors matter less when the 
+                The most difficult part of starting this app was implementing Spotify's Authorization Flow with PKCE in a system using JWTs to manage user authorization in this application. Once this was resolved, the next challenge was also the most exciting: the algorithm for similarity metrics across users' songs. After extensive research, I ended up sorting the various song feature data 
+                and using a simple euclidean distance formula. From what I was able to learn, it was the best way to reflect data characteristics such as range, frequency, and others, on the overall similarity score.
+                I also considered other similarity meterics such as cosine similarity; however, these methods didn't seem to fit the data that was being returned by Spotify because things like the direction of data vectors matter less when the 
                 values are all within a given range. 
                 <br /> 
                 <br /> 
                 Aside from the actual algorithm design, another challenge was normalizing the values so that no single metric would have an overwhelming impact on the similarity score. Things like instrumentalness 
-                might yield incredibly small values when calculations are being made, as compared to something like energy (Also worth noting that while the values themselves were very small, they also had a tendency to have an extremely high variance. So it's 
-                difficult to just multiply the metrics by some constant factor). There were also some complications with implementing Socket.io to use websockets for live chat functionality, which were then stored in the database and used to update React states. 
-                But these were later resolved by changing the React state management and adjusting the Socket.io configuration.   
+                might yield incredibly small values when similarity calculations are being made, as compared to something like energy (Also worth noting that while the values themselves were very small, they also had a tendency to have an extremely high variance. So it's 
+                difficult to just multiply the metrics by some constant factor). Additionally, there were also some complications with implementing Socket.io to use websockets for live chat functionality, which were then stored in the database and used to update React states. 
+                But these were later resolved by refactoring the React state management pattern and adjusting the Socket.io configuration.   
               </p>
               <h2 className="mt-16 text-xl font-bold tracking-tight text-gray-900">Technologies Used: </h2>
               <p className="mt-6">
