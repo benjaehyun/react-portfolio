@@ -64,7 +64,7 @@ export default function Example({isMobileMenuOpen}) {
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
             <h1 className='font-bold text-xl'>Description:  </h1><br /> 
               <p className='text-justify'>
-                When they are prompted during the profile creations process, users are able to select either: their top 20 songs from the past 6 months or a playlist from their libarary. 
+                When they are prompted during the profile creations process, users are able to select either: their top 20 songs from the past 6 months or a playlist from their library. 
                 Using Spotify's API, song features data can be fetched and stored. Using an algorithm that measures similarity metrics across features such as energy, instrumentalness, valence, etc., the 
                 profiles displayed to the user will be sorted based on that similarity score. <br /> <br />
                 Once users are matched (they both send a "like" to each other), they can communicate via private messages
