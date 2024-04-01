@@ -1,4 +1,5 @@
 import ProjectsList from "../../components/ProjectsList/ProjectsList"
+import OngoingProjectsCard from "../../components/OngoingProjectsCard/OngoingProjectsCard";
 
 
 export default function ProjectsPage ({isMobileMenuOpen}) {
@@ -32,6 +33,19 @@ export default function ProjectsPage ({isMobileMenuOpen}) {
             linkSuffix: "sweeper"
         },
     ];
+
+    const ongoingProjects = [
+        {
+            title: "LunchBreak", 
+            description: "LunchBreak is a comprehensive web application designed to simplify corporate dining experiences. By seamlessly connecting employees and companies with a wide array of restaurant options, the platform facilitates meal ordering, budget management, and menu customization. Developed with a keen focus on user experience and operational efficiency, LunchBreak utilizes a robust tech stack comprising Django and React, alongside Django REST Framework for dynamic API interactions and Simple JWT for secure authentication.", 
+            link: "/projects/lunchbreak"
+        }, 
+        {
+            title: "Brewista", 
+            description: "Brewista is designed to be a comprehensive digital companion for coffee enthusiasts. Its primary goal is to enhance the coffee brewing experience by allowing users to track, create, and share their coffee brewing recipes. Whether users are experimenting with different brewing methods, trying out new coffee beans, or perfecting their pour-over technique, Brewista provides a platform to document every step of the journey. Users can journal their experiences, note variations in flavor, and share insights with a community of like-minded individuals.", 
+            link: "/projects/brewista"
+        }        
+    ]
     
     const paddingTopClass = isMobileMenuOpen ? 'pt-[25vh]' : 'pt-[10vh]';
 
@@ -52,8 +66,17 @@ export default function ProjectsPage ({isMobileMenuOpen}) {
                         <h3 className="text-white text-2xl md:text-xl ">Take a look at what I've been up to recently ⬇️</h3>
                     </div>
                 </div>
-            
-             <ProjectsList projects={projects} />
+            <h1 className="text-4xl text-center font-bold font-mono text-white mt-[40vh] md:mt-[35vh] lg:mt-[40vh] mb-8">Ongoing Projects</h1>
+            {ongoingProjects.map((project, index) => (
+                <OngoingProjectsCard 
+                key={index}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                />
+                ))}
+            <h1 className="text-4xl text-center font-bold font-mono text-white mt-[20vh] md:mt-[17.5vh] lg:mt-[20vh] ">Past Projects</h1>
+            <ProjectsList projects={projects} />
         </>
     )    
 }
