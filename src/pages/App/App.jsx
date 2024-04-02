@@ -14,6 +14,8 @@ import Footer from '../../components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import React, { useState } from 'react';
 import ScrollToTop from '../../utilities/ScrollToTop';
+import LunchbreakProjectPage from '../LunchbreakProjectPage/LunchbreakProjectPage';
+import BrewistaProjectPage from '../BrewistaProjectPage/BrewistaProjectPage';
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
           <Route path='/projects/cardio' element={<CardioProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
           <Route path='/projects/thedraft' element={<TheDraftProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
           <Route path='/projects/lowkey' element={<LowkeyProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
+          <Route path='/projects/lunchbreak' element={<LunchbreakProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
+          <Route path='/projects/brewista' element={<BrewistaProjectPage isMobileMenuOpen={isMobileMenuOpen}/>} />
           <Route path='/about' element={<AboutPage isMobileMenuOpen={isMobileMenuOpen}/>} />
           <Route path='/contact' element={<ContactPage />} />
           <Route path='*' element={<NotFoundPage />} />
