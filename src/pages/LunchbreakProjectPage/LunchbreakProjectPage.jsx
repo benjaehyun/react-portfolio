@@ -4,6 +4,7 @@ import TableofContents from '../../components/LunchbreakComponents/TableofConten
 import BackgroundComponent from '../../components/LunchbreakComponents/BackgroundComponent';
 import OverviewAndGoalsComponent from '../../components/LunchbreakComponents/OverviewAndGoalsComponent';
 import TechnologiesComponent from '../../components/LunchbreakComponents/TechnologiesComponent';
+import FigmaEmbed from '../../components/LunchbreakComponents/FigmaEmbed';
 
 export default function LunchbreakProjectPage({isMobileMenuOpen}) {
     const paddingTopClass = isMobileMenuOpen ? 'pt-60' : 'pt-4';    
@@ -20,6 +21,10 @@ export default function LunchbreakProjectPage({isMobileMenuOpen}) {
             <div id="background">
                 <BackgroundComponent />
             </div>
+            <section className="py-12 px-4">
+                <h2 className="text-3xl text-white font-bold text-center mb-8">Design Prototype</h2>
+                <FigmaEmbed />
+            </section>
 
         </>
         
