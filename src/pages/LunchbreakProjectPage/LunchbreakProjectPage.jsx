@@ -1,10 +1,11 @@
 import React from 'react'
 import TextSectionComponent from '../../components/LunchbreakComponents/TextSectionComponent'
-import TableofContents from '../../components/LunchbreakComponents/TableofContents';
+import TableofContents from '../../components/LunchbreakComponents/TableofContents'; 
 import BackgroundComponent from '../../components/LunchbreakComponents/BackgroundComponent';
 import OverviewAndGoalsComponent from '../../components/LunchbreakComponents/OverviewAndGoalsComponent';
 import TechnologiesComponent from '../../components/LunchbreakComponents/TechnologiesComponent';
 import FigmaEmbed from '../../components/LunchbreakComponents/FigmaEmbed';
+import ProjectTimeline from '../../components/LunchbreakComponents/ProjectTimeline';
 
 export default function LunchbreakProjectPage({isMobileMenuOpen}) {
     const paddingTopClass = isMobileMenuOpen ? 'pt-60' : 'pt-4';    
@@ -20,6 +21,9 @@ export default function LunchbreakProjectPage({isMobileMenuOpen}) {
             </div>
             <div id="background">
                 <BackgroundComponent />
+            </div>
+            <div id="timeline">
+                <ProjectTimeline />
             </div>
             <section className="py-12 px-4">
                 <h2 className="text-3xl text-white font-bold text-center mb-8">Design Prototype</h2>
