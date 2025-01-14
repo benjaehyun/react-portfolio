@@ -1,5 +1,6 @@
 import ProjectsList from '../../components/ProjectsList/ProjectsList'
 import OngoingProjectsCard from '../../components/OngoingProjectsCard/OngoingProjectsCard';
+import OptimizedBackground from '../../utilities/OptimizedBackground';
 
 export default function HomePage ({isMobileMenuOpen}) {
 
@@ -48,10 +49,14 @@ export default function HomePage ({isMobileMenuOpen}) {
     
     return (
         <>
-            <div 
+            {/* <div 
                 style={{ backgroundImage: 'url("hobby/chicago-street.jpg")' }}
                 className='h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-sm top-0 left-0'
-            ></div>
+            ></div> */}
+            <OptimizedBackground
+                imagePath="hobby/processed/chicago-street.jpg"
+                className="h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-10] blur-sm top-0 left-0"
+            />
             <div className={`flex flex-col md:flex-row justify-center items-center ${paddingTopClass} md:pt-[9vh] relative`}>
                 <img 
                     src="me/griffith-portrait.jpg" 
