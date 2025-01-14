@@ -1,24 +1,31 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const NavigationContext = createContext();
 
 export const NavigationProvider = ({ children }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState('/');
-
-  const value = {
-    isMobileMenuOpen,
-    setIsMobileMenuOpen,
-    currentPage,
-    setCurrentPage
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isDarkBackground, setIsDarkBackground] = useState(true);
+    const location = useLocation();
+  
+    useEffect(() => {
+      // Define which routes have dark backgrounds
+      const darkBackgroundRoutes = ['/projects'];
+      setIsDarkBackground(darkBackgroundRoutes.includes(location.pathname));
+    }, [location]);
+  
+    const value = {
+      isMobileMenuOpen,
+      setIsMobileMenuOpen,
+      isDarkBackground
+    };
+  
+    return (
+      <NavigationContext.Provider value={value}>
+        {children}
+      </NavigationContext.Provider>
+    );
   };
-
-  return (
-    <NavigationContext.Provider value={value}>
-      {children}
-    </NavigationContext.Provider>
-  );
-};
 
 export const useNavigation = () => {
   const context = useContext(NavigationContext);
