@@ -9,7 +9,7 @@ export const NavigationProvider = ({ children }) => {
     const location = useLocation();
   
     useEffect(() => {
-      // Define which routes have dark backgrounds
+      // pages with dark backgrounds to manually adjust for higher contrast
       const darkBackgroundRoutes = ['/projects'];
       setIsDarkBackground(darkBackgroundRoutes.includes(location.pathname));
     }, [location]);

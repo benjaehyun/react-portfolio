@@ -3,20 +3,23 @@ import ProjectsPage from '../ProjectsPage/ProjectsPage';
 import AboutPage from '../AboutPage/AboutPage';
 import ContactPage from '../ContactPage/ContactPage';
 import SweeperProjectPage from '../SweeperProjectPage/SweeperProjectPage';
-import CardioProjectPage from '../CardioProjectPage/CardioProjectPage';
-import TheDraftProjectPage from '../TheDraftProjectPage/TheDraftProjectPage';
-import LowkeyProjectPage from '../LowkeyProjectPage/LowkeyProjectPage';
+import CardioPage from '../CardioPage/CardioPage';
+import TheDraftPage from '../TheDraftPage/TheDraftPage';
+import LowkeyPage from '../LowkeyPage/LowkeyPage';
 import HomePage from '../HomePage/HomePage';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import Footer from '../../components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import React, { useState } from 'react';
 import ScrollToTop from '../../utilities/ScrollToTop';
-import LunchbreakProjectPage from '../LunchbreakProjectPage/LunchbreakProjectPage';
-import BrewistaProjectPage from '../BrewistaProjectPage/BrewistaProjectPage';
+import LunchbreakPage from '../LunchbreakPage/LunchbreakPage';
+import BrewistaPage from '../BrewistaPage/BrewistaPage';
+import SymphonyPage from '../SymphonyPage/SymphonyPage';
 import { NavigationProvider } from '../../context/NavigationContext';
 import Navigation from '../../components/Navigation/Navigation';
 import { Routes, Route } from 'react-router-dom';
+import GivelyPage from '../GivelyPage/GivelyPage';
+import PomodoroPage from '../PomodoroPage/PomodoroPage';
 
 function App() {
 
@@ -30,11 +33,14 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/projects' element={<ProjectsPage />} />
             <Route path='/projects/sweeper' element={<SweeperProjectPage />} />
-            <Route path='/projects/cardio' element={<CardioProjectPage />} />
-            <Route path='/projects/thedraft' element={<TheDraftProjectPage />} />
-            <Route path='/projects/lowkey' element={<LowkeyProjectPage />} />
-            <Route path='/projects/lunchbreak' element={<LunchbreakProjectPage />} />
-            <Route path='/projects/brewista' element={<BrewistaProjectPage />} />
+            <Route path='/projects/cardio' element={<CardioPage />} />
+            <Route path='/projects/thedraft' element={<TheDraftPage />} />
+            <Route path='/projects/lowkey' element={<LowkeyPage />} />
+            <Route path='/projects/lunchbreak' element={<LunchbreakPage />} />
+            <Route path='/projects/brewista' element={<BrewistaPage />} />
+            <Route path='/projects/symphony' element={<SymphonyPage />} />
+            <Route path='/projects/gively' element={<GivelyPage />} />
+            <Route path='/projects/pomodoro' element={<PomodoroPage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='*' element={<NotFoundPage />} />

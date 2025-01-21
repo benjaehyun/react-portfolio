@@ -14,12 +14,11 @@ const OptimizedBackground = ({
     const loadAppropriateImage = () => {
       const width = window.innerWidth;
       
-      // Extract the base path and filename
       const lastSlashIndex = imagePath.lastIndexOf('/');
       const basePath = imagePath.substring(0, lastSlashIndex);
       const filename = imagePath.substring(lastSlashIndex + 1, imagePath.lastIndexOf('.'));
       
-      // Determine size suffix
+      // set size suffix
       let size;
       if (width <= 640) {
         size = 'sm';
@@ -29,7 +28,7 @@ const OptimizedBackground = ({
         size = 'lg';
       }
       
-      // Construct the path to the processed image
+      // path in processed image folder
       const webpPath = `${basePath}/processed/${filename}-${size}.webp`;
       console.log('Attempting to load optimized image:', webpPath);
       return webpPath;
@@ -79,7 +78,7 @@ const OptimizedBackground = ({
     return () => window.removeEventListener('resize', handleResize);
   }, [imagePath]);
 
-  // If used as a background element
+  // If its a background element
   if (asBackground) {
     return (
       <div 
@@ -88,7 +87,7 @@ const OptimizedBackground = ({
           imageLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        {/* Background placeholder */}
+        {/* placeholder */}
         <div 
           className={`absolute inset-0 bg-gray-900 transition-opacity duration-500 ${
             imageLoaded ? 'opacity-0' : 'opacity-100'

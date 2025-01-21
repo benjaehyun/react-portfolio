@@ -27,12 +27,11 @@ const Navigation = () => {
       >
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <Link to="/" className="text-2xl font-bold text-white">
               Ben Lee
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* desktop  */}
             <div className="hidden md:flex items-center space-x-8">
               {navigationItems.map((item) => (
                 <Link
@@ -55,7 +54,7 @@ const Navigation = () => {
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile button */}
             <button
               className="md:hidden p-2 text-gray-300 hover:text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -66,7 +65,7 @@ const Navigation = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* mobile menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
