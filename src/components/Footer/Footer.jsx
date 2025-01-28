@@ -7,8 +7,8 @@ const Footer = () => {
   const { isDarkBackground } = useNavigation();
 
   return (
-    <footer className={`w-full ${isDarkBackground ? 'bg-gray-900/80' : 'bg-gray-900'} backdrop-blur-md`}>
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+    <footer className={`w-full ${isDarkBackground ? 'bg-gray-950/80' : 'bg-gray-950'} backdrop-blur-md`}>
+      <div className=" mx-auto px-4 lg:px-8">
         <div className="h-16 flex items-center justify-between">
           <div className="flex items-center space-x-8">
             <Link to="/" className="text-lg font-bold text-white">
@@ -24,10 +24,13 @@ const Footer = () => {
               <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
                 About
               </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                Contact
+              </Link>
             </nav>
           </div>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-0 md:space-x-6">
             <a
               href="https://github.com/benjaehyun"
               target="_blank"
@@ -53,6 +56,7 @@ const Footer = () => {
             >
               <Mail className="w-5 h-5" />
             </a>
+            <p className='text-xs text-white md:text-sm'>Built By Benjamin Lee</p>
           </div>
         </div>
       </div>
