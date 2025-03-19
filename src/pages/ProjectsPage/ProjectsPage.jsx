@@ -1,82 +1,141 @@
-import ProjectsList from "../../components/ProjectsList/ProjectsList"
-import OngoingProjectsCard from "../../components/OngoingProjectsCard/OngoingProjectsCard";
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
+import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
+import OptimizedBackground from '../../utilities/OptimizedBackground';
+import { getOngoingProjects, getCompletedProjects, getProjectPreviewData } from '../../data/projects';
 
+const ProjectsPage = () => {
+    const ongoingRef = useRef(null);
+    const completedRef = useRef(null);
 
-export default function ProjectsPage ({isMobileMenuOpen}) {
-
-    const projects = [
-        {
-            title: "lowKEY",
-            description: "A MERN-Stack dating app. Full-Stack application where users can connect their Spotify account to view other users who have similar tastes in music. With the Spotify API, song metrics are used to sort users based on similarity. Once matched, users can chat privately and view what musical features they have in common.",
-            images: ["lowkey/lowkey-mac-1.png", "lowkey/lowkey-mac-2.png"],
-            linkSuffix: "lowkey"
-        },
-        {
-            title: "The Draft",
-            description: "A Django forum app. Full-Stack application created in collaboration with developers Nadew Demissew and Jon Do. The Draft is a discussion forum inspired by websites such as 'CollegeConfidential', with its focus shifted toward navigating the complex and challenging world of job hunting. This app also features a job application tracker which helps users track a particular application cycle.",
-            images: ["thedraft/thedraft-mac-1.png", "thedraft/thedraft-mac-2.png"],
-            linkSuffix: "thedraft"
-        },
-        {
-            title: "cardIO",
-            description: "A MEN-Stack flashcard app. My first Full-Stack application: CardIO. This project was developed as an educational resource to draw on high-yield learning from spaced repetition of flashcards. The idea for this app comes from my past experiences of using other flashcard apps such as Quizlet and Anki back as a pre-med student.",
-            images: ["cardio/cardio-1.png", "cardio/cardio-2.png"],
-            linkSuffix: "cardio"
-        },
-        {
-            title: "sweeper",
-            description: "A browser game made using JavaScript, HTML, and CSS. Based on the popular game Minesweeper, sweeper was my first dive into development, while using a nostalgic pastime as reference. My first coding endeavor utilizes basic game logic, DOM manipulation for graphic rendering, and a recursive implementation for the cell reveal function.",
-            images: [
-                "sweeper/sweeper-mac-1.png", "sweeper/sweeper-mac-2.png", 
-            // "sweeper/sweeper-3.png", "sweeper/sweeper-4.png"
-        ],
-            linkSuffix: "sweeper"
-        },
-    ];
-
-    const ongoingProjects = [
-        {
-            title: "LunchBreak", 
-            description: "LunchBreak is a comprehensive web application designed to simplify corporate dining experiences. By seamlessly connecting employees and companies with a wide array of restaurant options, the platform facilitates meal ordering, budget management, and menu customization. Developed with a keen focus on user experience and operational efficiency, LunchBreak utilizes a robust tech stack comprising Django and React, alongside Django REST Framework for dynamic API interactions and Simple JWT for secure authentication.", 
-            link: "/projects/lunchbreak"
-        }, 
-        {
-            title: "Brewista", 
-            description: "Brewista is designed to be a comprehensive digital companion for coffee enthusiasts. Its primary goal is to enhance the coffee brewing experience by allowing users to track, create, and share their coffee brewing recipes. Whether users are experimenting with different brewing methods, trying out new coffee beans, or perfecting their pour-over technique, Brewista provides a platform to document every step of the journey. Users can journal their experiences, note variations in flavor, and share insights with a community of like-minded individuals.", 
-            link: "/projects/brewista"
-        }        
-    ]
-    
-    const paddingTopClass = isMobileMenuOpen ? 'pt-[25vh]' : 'pt-[10vh]';
-
+  
+    const ongoingProjects = getOngoingProjects().map(getProjectPreviewData);
+    const completedProjects = getCompletedProjects().map(getProjectPreviewData);
+  
+    const scrollToSection = (ref) => {
+      ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+  
     return (
-        <>
-            <div 
-            style={{
-                backgroundImage: 'url("hobby/ny.jpg")', 
-                backgroundSize: "cover",
-                backgroundPosition: "center"
-            }}
-            className='h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-md top-0 left-0'
+      <div className="min-h-screen">
+        {/* Hero with optimized background */}
+        <section className="relative h-[90vh] md:h-[80vh] lg:h-[90vh] flex items-center justify-center">
+          <OptimizedBackground
+            imagePath="hobby/ny.jpg"
+            className="h-full bg-cover bg-center absolute w-full z-[-1] blur-sm"
+            asBackground={true}
+          />
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-3xl mx-auto"
             >
-            </div>
-            <div className={`flex flex-col md:flex-row justify-center items-center ${paddingTopClass} md:pt-[22vh] relative `}>
-                    <div className="w-4/5 md:w-[30vw] mt-4 md:mt-0 md:ml-16 p-4">
-                        <h1 className='text-white text-4xl md:text-4xl'>Thanks for taking an interest in some of my projects!</h1> <br />
-                        <h3 className="text-white text-2xl md:text-xl ">Take a look at what I've been up to recently ⬇️</h3>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                My Projects
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200">
+                A collection of my work showing my journey in software development.
+                With their own technical challenges, each project represents
+                unique learning experiences and solutions.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+  
+        <div className="bg-gray-900">
+        {/* stuff ur currently working on */}
+            {ongoingProjects.length > 0 && (
+                <section ref={ongoingRef} className="container mx-auto px-4 py-20">
+                    <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    >
+                        <div className="mb-12 md:max-w-3xl mx-auto text-center">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                                Currently Working On
+                            </h2>
+                            <p className="text-gray-400 md:text-lg md:leading-relaxed">
+                                These are my active projects where I'm currently investing my time
+                                and exploring new technologies.
+                            </p>
+                        </div>
+                        <div className="grid md:grid-cols-1 gap-8">
+                            {ongoingProjects.map(project => (
+                                <ProjectPreview
+                                    key={project.title}
+                                    {...project}
+                                />
+                            ))}
+                        </div>
+                    </motion.div>
+                </section>
+            )}
+  
+            {/*completed projects */}
+            <section ref={completedRef} className="container mx-auto px-4 py-20">
+                <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                >
+                    <div className="mb-12 md:max-w-3xl mx-auto text-center"> 
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                            Completed Projects
+                        </h2>
+                        <p className="text-gray-400 md:text-lg md:leading-relaxed">
+                            My finished projects, each representing different
+                            challenges and learning experiences.
+                        </p>
                     </div>
+                <div className="space-y-8">
+                    {completedProjects.map(project => (
+                    <ProjectPreview
+                        key={project.title}
+                        {...project}
+                    />
+                    ))}
                 </div>
-            <h1 className="text-4xl text-center font-bold font-mono text-white mt-[40vh] md:mt-[35vh] lg:mt-[40vh] mb-8">Ongoing Projects</h1>
-            {ongoingProjects.map((project, index) => (
-                <OngoingProjectsCard 
-                key={index}
-                title={project.title}
-                description={project.description}
-                link={project.link}
-                />
-                ))}
-            <h1 className="text-4xl text-center font-bold font-mono text-white mt-[20vh] md:mt-[17.5vh] lg:mt-[20vh] ">Past Projects</h1>
-            <ProjectsList projects={projects} />
-        </>
-    )    
-}
+                </motion.div>
+            </section>
+        </div>
+  
+        {/* quick navigation between ongoing and completed proj */}
+        <nav className="fixed right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex flex-col items-center space-y-4"
+          >
+            {ongoingProjects.length > 0 && (
+              <button
+                onClick={() => scrollToSection(ongoingRef)}
+                className="group relative"
+                aria-label="Navigate to ongoing projects"
+              >
+                <div className="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform" />
+                <span className="absolute left-0 transform -translate-x-full -translate-y-1/2 top-1/2 mr-2 px-2 py-1 bg-gray-800 rounded text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  Ongoing Projects
+                </span>
+              </button>
+            )}
+            <button
+              onClick={() => scrollToSection(completedRef)}
+              className="group relative"
+              aria-label="Navigate to completed projects"
+            >
+              <div className="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform" />
+              <span className="absolute left-0 transform -translate-x-full -translate-y-1/2 top-1/2 mr-2 px-2 py-1 bg-gray-800 rounded text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Completed Projects
+              </span>
+            </button>
+          </motion.div>
+        </nav>
+      </div>
+    );
+};
+  
+  export default ProjectsPage;

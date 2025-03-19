@@ -1,82 +1,87 @@
-import ProjectsList from '../../components/ProjectsList/ProjectsList'
-import OngoingProjectsCard from '../../components/OngoingProjectsCard/OngoingProjectsCard';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import ProjectPreview from '../../components/ProjectPreview/ProjectPreview';
+import OptimizedBackground from '../../utilities/OptimizedBackground';
+import { getFeaturedProjects, getOngoingProjects, getProjectPreviewData } from '../../data/projects';
 
-export default function HomePage ({isMobileMenuOpen}) {
+export default function HomePage() {
 
-    const projects = [
-        {
-            title: "lowKEY",
-            description: "A MERN-Stack dating app. Full-Stack application where users can connect their Spotify account to view other users who have similar tastes in music. With the Spotify API, song metrics are used to sort users based on similarity. Once matched, users can chat privately and view what musical features they have in common.",
-            images: ["lowkey/lowkey-mac-1.png", "lowkey/lowkey-mac-2.png"],
-            linkSuffix: "lowkey"
-        },
-        {
-            title: "The Draft",
-            description: "A Django forum app. Full-Stack application created in collaboration with developers Nadew Demissew and Jon Do. The Draft is a discussion forum inspired by websites such as 'CollegeConfidential', with its focus shifted toward navigating the complex and challenging world of job hunting. This app also features a job application tracker which helps users track a particular application cycle.",
-            images: ["thedraft/thedraft-mac-1.png", "thedraft/thedraft-mac-2.png"],
-            linkSuffix: "thedraft"
-        },
-        {
-            title: "cardIO",
-            description: "A MEN-Stack flashcard app. My first Full-Stack application: CardIO. This project was developed as an educational resource to draw on high-yield learning from spaced repetition of flashcards. The idea for this app comes from my past experiences of using other flashcard apps such as Quizlet and Anki back as a pre-med student.",
-            images: ["cardio/cardio-1.png", "cardio/cardio-2.png"],
-            linkSuffix: "cardio"
-        },
-        {
-            title: "sweeper",
-            description: "A browser game made using JavaScript, HTML, and CSS. Based on the popular game Minesweeper, sweeper was my first dive into development, while using a nostalgic pastime as reference. My first coding endeavor utilizes basic game logic, DOM manipulation for graphic rendering, and a recursive implementation for the cell reveal function.",
-            images: [
-                "sweeper/sweeper-mac-1.png", "sweeper/sweeper-mac-2.png"],
-            linkSuffix: "sweeper"
-        },
-    ];
+  const featuredProjects = getFeaturedProjects().map(getProjectPreviewData);
+  const ongoingProjects = getOngoingProjects().map(getProjectPreviewData);
 
-    const ongoingProjects = [
-        {
-            title: "LunchBreak", 
-            description: "LunchBreak is a comprehensive web application designed to simplify corporate dining experiences. By seamlessly connecting employees and companies with a wide array of restaurant options, the platform facilitates meal ordering, budget management, and menu customization. Developed with a keen focus on user experience and operational efficiency, LunchBreak utilizes a robust tech stack comprising Django and React, alongside Django REST Framework for dynamic API interactions and Simple JWT for secure authentication.", 
-            link: "/projects/lunchbreak"
-        }, 
-        {
-            title: "Brewista", 
-            description: "Brewista is designed to be a comprehensive digital companion for coffee enthusiasts. Its primary goal is to enhance the coffee brewing experience by allowing users to track, create, and share their coffee brewing recipes. Whether users are experimenting with different brewing methods, trying out new coffee beans, or perfecting their pour-over technique, Brewista provides a platform to document every step of the journey. Users can journal their experiences, note variations in flavor, and share insights with a community of like-minded individuals.", 
-            link: "/projects/brewista"
-        }        
-    ]
-
-    const paddingTopClass = isMobileMenuOpen ? 'pt-[27vh]' : 'pt-[10vh]';
-    
+  const CurrentWorkSection = () => {
     return (
-        <>
-            <div 
-                style={{ backgroundImage: 'url("hobby/chicago-street.jpg")' }}
-                className='h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-sm top-0 left-0'
-            ></div>
-            <div className={`flex flex-col md:flex-row justify-center items-center ${paddingTopClass} md:pt-[9vh] relative`}>
-                <img 
-                    src="me/griffith-portrait.jpg" 
-                    alt="Ben Lee" 
-                    className="w-32 md:w-[20vw] rounded-full border-2 border-white" 
-                />
-                <div className="w-4/5 md:w-[30vw] mt-4 md:mt-0 md:ml-16 p-4">
-                    <h1 className='text-white text-2xl md:text-4xl lg:text-5xl'>Hi there 👋, I'm Ben!</h1> <br/>
-                    <p className="text-white text-lg md:text-xl lg:text-2xl ">
-                        I'm a full-stack developer with a STEM background and entrepreneurial experience.<br />
-                        I'm currently located in Seattle, WA.
-                    </p>
-                </div>
-            </div>
-            <h1 className="text-4xl text-center font-bold font-mono text-white mt-[40vh] md:mt-[35vh] lg:mt-[40vh] mb-8">Ongoing Projects</h1>
-            {ongoingProjects.map((project, index) => (
-                <OngoingProjectsCard 
-                key={index}
-                title={project.title}
-                description={project.description}
-                link={project.link}
-                />
-                ))}
-            <h1 className="text-4xl text-center font-bold font-mono text-white mt-[20vh] md:mt-[17.5vh] lg:mt-[20vh] ">Past Projects</h1>
-            <ProjectsList projects={projects} />
-        </>
-    )  
+      <div>
+        <div className="flex items-center mb-8">
+          <h2 className="text-3xl font-bold text-white">What I'm Working On</h2>
+        </div>
+        <div className="grid md:grid-cols-1 gap-8">
+          {ongoingProjects.map(project => (
+            <ProjectPreview
+              key={project.title}
+              {...project}
+            />
+          ))}
+        </div>
+    </div>
+    );
+  };
+
+  return (
+    <div className="min-h-screen pt-24">
+      {/* optimized background image */}
+      <OptimizedBackground 
+        imagePath="hobby/chicago-street.jpg"
+        className="h-[90vh] md:h-[80vh] lg:h-[90vh] bg-cover bg-center absolute w-full z-[-1] blur-sm top-0 left-0"
+        asBackground={true}
+      />
+      
+      {/* Hero  */}
+      <div className="flex flex-col md:flex-row justify-center items-center h-[80vh] px-4">
+        <img 
+          src="me/griffith-portrait.jpg" 
+          alt="Ben Lee" 
+          className="w-32 md:w-[20vw] rounded-full border-2 border-white"
+          loading="eager"
+        />
+        <div className="w-4/5 md:w-[30vw] mt-4 md:mt-0 md:ml-16 p-4">
+          <h1 className="text-white text-2xl md:text-4xl lg:text-5xl">Hi there 👋, I'm Ben!</h1>
+          <p className="text-white text-lg md:text-xl lg:text-2xl mt-4">
+            I'm a full-stack developer with a STEM background and entrepreneurial experience.<br />
+            I'm currently located in Seattle, WA.
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-gray-900">
+        {/* stuff ur currently working on */}
+        <section className="container mx-auto px-4 py-20">
+          <CurrentWorkSection />
+        </section>
+
+        {/* featured projects  */}
+        <section className="container mx-auto px-4 py-20">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold text-white">Featured Projects</h2>
+            <Link 
+              to="/projects"
+              className="flex items-center space-x-2 px-4 py-2 text-blue-400 hover:text-blue-300 transition-colors rounded-lg hover:bg-gray-800/50"
+            >
+              <span className="text-lg">View all projects</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+          <div className="space-y-16">
+            {featuredProjects.map(project => (
+              <ProjectPreview
+                key={project.title}
+                {...project}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
 }
