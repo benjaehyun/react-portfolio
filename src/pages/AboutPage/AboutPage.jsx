@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-// import { PythonOriginal, JavascriptOriginal, ReactOriginal, ExpressOriginal, Html5Original, Css3Original, BootstrapOriginal, TailwindcssPlain, DjangoPlainWordmark, MongodbOriginal, PostgresqlOriginal, GithubOriginal, AmazonwebservicesOriginal, NodejsOriginal } from 'devicons-react';
-import { 
-    DiJavascript1 as JavascriptOriginal,
-    DiPython as PythonOriginal,
-    DiReact as ReactOriginal,
-    DiNodejs as NodejsOriginal,
-    DiHtml5 as Html5Original,
-    DiCss3 as Css3Original,
-    DiMongodb as MongodbOriginal,
-    DiPostgresql as PostgresqlOriginal,
-    DiGithub as GithubOriginal,
-  } from 'react-icons/di';
-  
-  import {
-    SiExpress as ExpressOriginal,
-    SiBootstrap as BootstrapOriginal,
-    SiTailwindcss as TailwindcssPlain,
-    SiDjango as DjangoPlainWordmark,
-    SiAmazonaws as AmazonwebservicesOriginal,
-  } from 'react-icons/si';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -84,7 +62,6 @@ const SkillsSection = () => {
       ]
     }
   ];
->>>>>>> feature
 
   return (
     <section className="w-full px-4 py-20 bg-gray-800/50">
