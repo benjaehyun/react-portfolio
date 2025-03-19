@@ -138,7 +138,7 @@ export const projects = [
           },
           {
             src: "/symphony/symphony-3.png",
-            description: "Frequency of most common genres in user's selected playlist"
+            description: "Frequency of most common genres in user's selected playlist (Note: percentages aren't a fraction of the total genres. Rather it's the percentage of songs that these genres appeared in, since spotify provides several genres for each song/artist)"
           },
           {
             src: "/symphony/symphony-4.png",
@@ -349,7 +349,8 @@ export const projects = [
       "AsyncStorage",
       "Fuse.js"
     ],
-    githubUrl: "https://github.com/GivelyFoundation/Gively", 
+    githubUrl: '', 
+    // githubUrl: "https://github.com/GivelyFoundation/Gively", 
     liveUrl: null, 
     status: "ongoing",
     featured: false,

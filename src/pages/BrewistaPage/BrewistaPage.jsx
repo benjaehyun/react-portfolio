@@ -276,9 +276,9 @@ export default function BrewistaProjectPage() {
             </p>
             <ul className="space-y-2 text-sm">
               <li>• Recipe scaling calculations were imprecise, especially for brew times</li>
-              <li>• Buying a new bag of coffee meant starting the dialing-in process from scratch</li>
+              <li>• A new bag of coffee meant starting the dialing-in process from scratch</li>
               <li>• Difficult to reference past dialed-in recipes with similar beans</li>
-              <li>• Finding recipes, calculating, and timing recipes by hand was arduous first thing in the morning</li>
+              <li>• Finding recipes, calculating, and timing recipes by hand is an arduous task first thing in the morning</li>
             </ul>
           </div>
         </div>
@@ -291,7 +291,7 @@ export default function BrewistaProjectPage() {
             </p>
             <ul className="space-y-2 text-sm">
               <li>• Precise recipe scaling with accurate brew time calculations</li>
-              <li>• Quick access to similar recipes based on bean characteristics</li>
+              <li>• Quick access to similar recipes</li>
               <li>• Flexible recipe creation and calculations based on target coffee or water amounts</li>
               <li>• Easy tracking of modifications and improvements</li>
             </ul>
@@ -318,10 +318,38 @@ export default function BrewistaProjectPage() {
     </section>
   );
 
+  const CurrentWork = () => (
+    <section className="space-y-8">
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">What I'm Working On Now</h2>
+        <p className="text-gray-300">
+          As something that I use everyday, I constantly have new ideas and visions for this app's abilities
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 gap-8">
+        <div className="bg-gray-700/50 p-6 rounded-xl space-y-4 md:col-span-2">
+          <h3 className="text-lg font-semibold text-white">Recipe Versioning</h3>
+          <div className="space-y-3 text-gray-300">
+            <ul className="space-y-2 text-sm">
+                <li>• Current structure for app only allows for destructive changes to recipes without creating a new copy</li>
+                <li>• Tracks all saved changes in a new recipe versioning system</li>
+                <li>• Whether it be a previous iteration of a technique or coffee bean/gear used before, past recipes can be used and modified</li>
+                <li>• Includes major (X.0) versions and minor (X.Y) versions for a fully scoped view of version history</li>
+                <li>• Also introduces changes for recipe branching (if you were to copy a recipe from someone else and make edits), maintaining parent recipe connection</li>
+                <li>• Makes recipe system more concise as you won't have to save new copies for new configurations or recipe adjustments </li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
   return (
     <ProjectTemplate project={project}>
       <div className="max-w-6xl mx-auto space-y-16">
         <MediaShowcaseSection />
+        <CurrentWork /> 
         <ProjectMotivationSection /> 
         <CombinedFeaturesSection />
         <ScalingAlgorithmSection />

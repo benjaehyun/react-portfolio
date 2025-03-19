@@ -111,7 +111,7 @@ export default function SymphonyPage() {
                     rel="noopener noreferrer" 
                     className="block text-blue-400 hover:text-blue-300 transition-colors"
                     >
-                    Another paper by Rentfrow that provided guidance on mapping Spotify's song features to the MUSIC model →
+                    Another paper by Rentfrow that helped map Spotify's song features to the MUSIC model →
                     </a>
                 </div>
                 </div>
@@ -154,7 +154,7 @@ export default function SymphonyPage() {
                 </div>
 
                 <div className="bg-gray-700/50 p-6 rounded-lg">
-                <h4 className="text-gray-200 font-medium mb-3">Score Interpretation</h4>
+                <h4 className="text-gray-200 font-medium mb-3">Rough Score Interpretation</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
                     <div className="space-y-1">
                     <p className="text-gray-300">0.8-1.0</p>
@@ -321,7 +321,8 @@ export default function SymphonyPage() {
                 <h3 className="text-xl font-semibold text-white border-b border-gray-700 pb-2">
                 API & Authentication Infrastructure
                 </h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid gap-6">
+                {/* <div className="grid md:grid-cols-2 gap-6"> */}
                 <div className="bg-gray-700/30 p-6 rounded-lg">
                     <h4 className="text-blue-400 font-medium mb-4">Class-based API Utilities</h4>
                     <p className="text-sm text-gray-300 mb-4">
@@ -333,7 +334,7 @@ export default function SymphonyPage() {
                     <li>• Request interceptors for consistent error handling</li>
                     </ul>
                 </div>
-                <div className="bg-gray-700/30 p-6 rounded-lg">
+                {/* <div className="bg-gray-700/30 p-6 rounded-lg">
                     <h4 className="text-blue-400 font-medium mb-4">Rate Limiting Strategies</h4>
                     <p className="text-sm text-gray-300 mb-4">
                     Redis-based rate limiting system with intelligent request management:
@@ -344,7 +345,7 @@ export default function SymphonyPage() {
                     <li>• Batch processing for analytics operations</li>
                     <li>• Graceful degradation during high load</li>
                     </ul>
-                </div>
+                </div> */}
                 </div>
             </div>
 
@@ -362,7 +363,6 @@ export default function SymphonyPage() {
                     <ul className="space-y-2 text-sm text-gray-400">
                     <li>• Automatic image compression and resizing</li>
                     <li>• Format optimization based on browser support</li>
-                    <li>• EXIF data handling and orientation fixing</li>
                     <li>• Real-time preview generation</li>
                     </ul>
                 </div>
@@ -372,7 +372,7 @@ export default function SymphonyPage() {
                     Seamless state management throughout the upload process:
                     </p>
                     <ul className="space-y-2 text-sm text-gray-400">
-                    <li>• Progress tracking with upload estimates</li>
+                    <li>• Progress tracking with redux integration for images</li>
                     <li>• Optimistic updates for immediate feedback</li>
                     <li>• Automatic retry and failure recovery</li>
                     <li>• Background processing with status updates</li>

@@ -158,7 +158,7 @@ const AboutPage = () => {
                 Pre-med Student Turned Engineer
               </h1>
               <p className="text-xl text-gray-100 drop-shadow-lg">
-                A new Seattleite with a passion for elegant solutions and recent graduate of 
+                A new Seattleite with a passion for elegant solutions and graduate of 
                 General Assembly's Software Engineering Immersive Program!
               </p>
             </motion.div>
@@ -178,8 +178,8 @@ const AboutPage = () => {
               Hi 👋, Glad you were able to find me!
             </h2>
             <p className="text-lg leading-relaxed">
-              I'm Ben, and I am currently based in Seattle, WA. I'm a creative-minded software
-              developer with a passion for elegant solutions to enrich user experiences.
+              I'm Ben, and I am currently based in Seattle, WA. I'm a software
+              developer who loves tackling niche challenges for unique user experiences.
             </p>
             <p className="text-lg leading-relaxed">
               Before embarking on my journey of becoming a developer, I was fully immersed in my pre-med studies in university, MCAT taken and all. Then the covid-19 pandemic pumped the brakes on school, 
@@ -193,7 +193,7 @@ const AboutPage = () => {
               resilience and a fresh perspective.
             </p>
             <p className="text-lg leading-relaxed">
-              I'm currently looking for that next step to push impactful products and contribute meaningfully to the dynamic landscape of technology.
+              I'm constantly looking for that next step to push the boundaries of my abilities and contribute meaningfully to the dynamic landscape of technology.
             </p>
           </motion.div>
         </section>
