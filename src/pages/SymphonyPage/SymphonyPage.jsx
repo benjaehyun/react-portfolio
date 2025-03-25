@@ -228,7 +228,7 @@ export default function SymphonyPage() {
                     <p className="text-sm text-gray-400">Bidirectional communication with room-based routing</p>
                     </div>
                     <div className="p-4 bg-gray-700/50 rounded-lg">
-                    <h5 className="font-medium mb-2">Message Deduplication</h5>
+                    <h5 className="font-medium mb-2">Message De-duplication</h5>
                     <p className="text-sm text-gray-400">ClientId system prevents duplicate messages</p>
                     </div>
                     <div className="p-4 bg-gray-700/50 rounded-lg">
